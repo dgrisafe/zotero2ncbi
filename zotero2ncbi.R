@@ -27,8 +27,8 @@ ncbi_batch_format <- zotero_refs %>%
   dplyr::mutate(
     ncbi_string = paste0(
       paste(sep = "|",
-            Journal.Abbreviation, Publication.Year, Volume, 
-            str_extract(Pages, "^\\d+"), Author, Key), 
+            Publication.Title, Publication.Year, Volume, 
+            str_extract(Pages, "^(\\d|\\w)+"), Author, Key), 
       "|"
       )
     )
