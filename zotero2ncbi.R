@@ -40,5 +40,5 @@ ncbi_batch_format$ncbi_string %>% head
 #   https://www.ncbi.nlm.nih.gov/pubmed/batchcitmatch
 write.table(
   ncbi_batch_format$ncbi_string, file = paste0("refs_ncbi_batch_citation_manager_", Sys.Date(), ".txt"),
-  sep = "\t", row.names = FALSE, col.names = FALSE
+  sep = "\t", row.names = FALSE, col.names = FALSE, quote = FALSE
   )
